@@ -1,7 +1,11 @@
 package Reserva_Cine;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Reserva_Cine {
 
+<<<<<<< HEAD
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		 boolean loginExitoso = Menus.iniciarSesion();
@@ -27,3 +31,6 @@ public class Reserva_Cine {
 	    }
 	}
 
+=======
+    public static void main(String[] args) {
+>>>>>>> 5c9661aef6df97a00e7f384cdddbbab44c4ce5e1
