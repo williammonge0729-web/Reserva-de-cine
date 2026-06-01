@@ -19,7 +19,7 @@ public class Menus {
 		            String contrasenia = sc.nextLine();
 		            
 		            if (contrasenia.equals("1234")) {
-		                System.out.println("\n✅ ¡Bienvenido/a " + usuario + "! Has iniciado sesión con éxito.");
+		                System.out.println("\n ¡Bienvenido/a " + usuario + "! Has iniciado sesión con éxito.");
 		                loginExitoso = true; 
 		            } else {
 		                System.out.println("\n❌ Contraseña incorrecta. Inténtalo de nuevo.\n");
