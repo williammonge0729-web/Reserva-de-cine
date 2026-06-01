@@ -19,11 +19,9 @@ public class Reserva_Cine {
 	                System.out.println("\n🎬 Pelicula elegida con éxito: " + peliculaSeleccionada);
 	                
 	                String horarioFinal = Menus.mostrarHorarios(peliculaSeleccionada);
-	                
-	                // === AQUÍ SE CONECTA LA CLASE DE TU COMPAÑERO ===
-	                // Llamamos a su clase y método, pasándole la película y el horario
+	            
 	                reserva.gestionarReserva(peliculaSeleccionada, horarioFinal);
-	                // ===============================================
+	         
 
 	            } else {
 	                System.out.println("\nReserva Cancelada.");
