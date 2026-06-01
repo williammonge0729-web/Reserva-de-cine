@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class Menus {
 
-    // NUEVO MÉTODO: Devuelve true si inicia sesión correctamente, o false si falla
 	 public static boolean iniciarSesion() {
 		        Scanner sc = new Scanner(System.in);
 		        boolean loginExitoso = false; 
@@ -19,10 +18,10 @@ public class Menus {
 		            String contrasenia = sc.nextLine();
 		            
 		            if (contrasenia.equals("1234")) {
-		                System.out.println("\n✅ ¡Bienvenido/a " + usuario + "! Has iniciado sesión con éxito.");
+		                System.out.println("\n ¡Bienvenido/a " + usuario + "! Has iniciado sesión con éxito.");
 		                loginExitoso = true; 
 		            } else {
-		                System.out.println("\n❌ Contraseña incorrecta. Inténtalo de nuevo.\n");
+		                System.out.println("\n Contraseña incorrecta. Inténtalo de nuevo.\n");
 		            }
 		        }
 		        
@@ -150,7 +149,7 @@ public class Menus {
 		                horarioElegido = h3;
 		                horarioValido = true;
 		            } else {
-		                System.out.println("\n❌ Error: Debe ingresar el número del horario correcto.\n");
+		                System.out.println("\n Error: Debe ingresar el número del horario correcto.\n");
 		            }
 		        }
 		        
