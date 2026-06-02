@@ -4,8 +4,9 @@ import javax.sound.sampled.*;
 import java.io.File;
 
 public class MusicaFondo {
-
-    public static void main(String[] args) {
+  
+	public static void encenderMusica() {
+  
 
         try {
             File archivo = new File("recursos/Music_menu.wav");
@@ -22,8 +23,6 @@ public class MusicaFondo {
 
             System.out.println("Musica en loop...");
 
-            // Mantiene el programa abierto
-            Thread.sleep(Long.MAX_VALUE);
 
         } catch (Exception e) {
             e.printStackTrace();

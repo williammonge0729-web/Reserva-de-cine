@@ -9,7 +9,7 @@ public class Reserva_Cine {
 		// TODO Auto-generated method stub
 		
 		 Scanner sc = new Scanner(System.in);
-	        
+	        	MusicaFondo.encenderMusica();
 	        
 	        boolean loginExitoso = Menus.iniciarSesion();
 	        
