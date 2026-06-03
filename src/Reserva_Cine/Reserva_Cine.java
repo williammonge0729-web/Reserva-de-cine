@@ -27,7 +27,7 @@ public class Reserva_Cine {
 	                    return; // Finaliza el programa
 	                }
 	                
-	                // Preguntamos si está seguro
+	               // Preguntamos si está seguro
 	                System.out.println("\n Ha seleccionado: " + peliculaSeleccionada);
 	                System.out.print("¿Está seguro de la película seleccionada? (si/no): ");
 	                String respuesta = sc.nextLine().trim().toLowerCase();

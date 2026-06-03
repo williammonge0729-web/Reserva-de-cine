@@ -134,7 +134,7 @@ public class Menus {
 		        String horarioElegido = "";
 		        boolean horarioValido = false;
 		        
-		        // Bucle para obligar al usuario a meter una opción correcta
+		        
 		        while (!horarioValido) {
 		            System.out.print("Ingresa el número del horario en el que desea ver la película: ");
 		            String entrada = sc.nextLine().trim();

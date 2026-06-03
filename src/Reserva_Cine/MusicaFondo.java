@@ -17,11 +17,10 @@ public class MusicaFondo {
             Clip clip = AudioSystem.getClip();
             clip.open(audio);
 
-            // 🔁 LOOP INFINITO
             clip.loop(Clip.LOOP_CONTINUOUSLY);
             clip.start();
 
-            System.out.println("Musica en loop...");
+         
 
 
         } catch (Exception e) {
