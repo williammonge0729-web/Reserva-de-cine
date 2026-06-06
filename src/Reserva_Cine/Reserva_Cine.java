@@ -16,31 +16,28 @@ public class Reserva_Cine {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		
-MusicaFondo.encenderMusica(); 
-        
-        boolean loginExitoso = Menus.iniciarSesion();
-        
-        if (loginExitoso) {
-            boolean continuarPrograma = true;
-            
-            do {
-              
-                System.out.println(CYAN + "\n┌─────────────────────────────────────────────────────────┐" + RESET);
-                
-                System.out.println(CYAN + "│" + CYAN + "             SISTEMA CENTRAL DE CINE                     " + CYAN + "│" + RESET);
-                System.out.println(CYAN + "├─────────────────────────────────────────────────────────┤" + RESET);
-                System.out.println(CYAN + "│" + VERDE + "  1. Acceder como Cliente (Comprar Boletos)              " + CYAN + "│" + RESET);
-                System.out.println(CYAN + "│" + VERDE + "  2. Acceder como Empleado (Panel de Gestión)            " + CYAN + "│" + RESET);
-                
-                System.out.println(CYAN + "│" + ROJO + "  3. Apagar el Sistema                                   " + CYAN + "│" + RESET);
-                
-                System.out.println(CYAN + "└─────────────────────────────────────────────────────────┘" + RESET);
-                
-                System.out.print(" Seleccione su modo de acceso: ");
-                String rol = sc.nextLine().trim();
 
-                if (rol.equals("1")) {
-                    // --- FLUJO NORMAL DE CLIENTE ---
+        
+        MusicaFondo.encenderMusica(); 
+        
+        boolean continuarPrograma = true;
+        
+        do {
+            System.out.println(CYAN + "\n┌─────────────────────────────────────────────────────────┐" + RESET);
+            System.out.println(CYAN + "│" + CYAN + "             SISTEMA CENTRAL DE CINE                     " + CYAN + "│" + RESET);
+            System.out.println(CYAN + "├─────────────────────────────────────────────────────────┤" + RESET);
+            System.out.println(CYAN + "│" + VERDE + "  1. Acceder como Cliente (Comprar Boletos)              " + CYAN + "│" + RESET);
+            System.out.println(CYAN + "│" + VERDE + "  2. Acceder como Empleado (Panel de Gestión)            " + CYAN + "│" + RESET);
+            System.out.println(CYAN + "│" + ROJO + "  3. Apagar el Sistema                                   " + CYAN + "│" + RESET);
+            System.out.println(CYAN + "└─────────────────────────────────────────────────────────┘" + RESET);
+            
+            System.out.print(" Seleccione su modo de acceso: ");
+            String rol = sc.nextLine().trim();
+
+            if (rol.equals("1")) {
+                // Contraseña: 1234
+                if (Menus.iniciarSesion(rol)) {
+                    // FLUJO NORMAL DE CLIENTE
                     String peliculaSeleccionada = "";
                     boolean confirmado = false;
                     
@@ -68,27 +65,23 @@ MusicaFondo.encenderMusica();
                         String horarioFinal = Menus.mostrarHorarios(peliculaSeleccionada);
                         reserva.gestionarReserva(peliculaSeleccionada, horarioFinal);
                     }
-
-                } else if (rol.equals("2")) {
-                    // 🔒 FILTRO DE SEGURIDAD ANTES DE ENTRAR
-                    boolean esEmpleadoValido = Empleado.verificarContraseniaEmpleado();
-                    
-                    if (esEmpleadoValido) {
-                        Empleado.menuPanelEmpleado();
-                    }
-
-                } else if (rol.equals("3")) {
-                    System.out.println(ROJO + "\n Apagando servidores... Muchas gracias por usar el sistema." + RESET);
-                    continuarPrograma = false;
-                } else {
-                    System.out.println(ROJO + " Entrada inválida. Digite 1, 2 o 3." + RESET);
                 }
-                
-            } while (continuarPrograma); 
+
+            } else if (rol.equals("2")) {
+                //Contraseña: 8888
+                if (Menus.iniciarSesion(rol)) {
+                    Empleado.menuPanelEmpleado();
+                }
+
+            } else if (rol.equals("3")) {
+                System.out.println(ROJO + "\n Apagando servidores... Muchas gracias por usar el sistema." + RESET);
+                continuarPrograma = false;
+            } else {
+                System.out.println(ROJO + " Entrada inválida. Digite 1, 2 o 3." + RESET);
+            }
             
-        } else {
-            System.out.println(ROJO + "Credenciales incorrectas. Fin del programa." + RESET);
-        }
+        } while (continuarPrograma); 
+        
         sc.close();
     }
 }

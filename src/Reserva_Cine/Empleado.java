@@ -64,8 +64,8 @@ public class Empleado {
         System.out.println(Reserva_Cine.CYAN + "===========================================================" + Reserva_Cine.RESET);
         System.out.printf("  %-35s %-15s\n", "CONCEPTO", "VALOR TOTAL");
         System.out.println(Reserva_Cine.CYAN + "-----------------------------------------------------------" + Reserva_Cine.RESET);
-        System.out.printf("  %-35s " + Reserva_Cine.VERDE + "%-15d\n" + Reserva_Cine.RESET, "🎟️ Total de Boletos Vendidos:", boletosVendidosTotal);
-        System.out.printf("  %-35s " + Reserva_Cine.VERDE + "$%-14.2f\n" + Reserva_Cine.RESET, "💰 Ingresos Brutos Recaudados:", ingresosRecaudadosTotal);
+        System.out.printf("  %-35s " + Reserva_Cine.VERDE + "%-15d\n" + Reserva_Cine.RESET, " Total de Boletos Vendidos:", boletosVendidosTotal);
+        System.out.printf("  %-35s " + Reserva_Cine.VERDE + "$%-14.2f\n" + Reserva_Cine.RESET, " Ingresos Brutos Recaudados:", ingresosRecaudadosTotal);
         System.out.println(Reserva_Cine.CYAN + "-----------------------------------------------------------" + Reserva_Cine.RESET);
         System.out.println("  Estado del Arqueo: " + Reserva_Cine.VERDE + "Balance Correcto" + Reserva_Cine.RESET);
         System.out.println(Reserva_Cine.CYAN + "===========================================================" + Reserva_Cine.RESET);
