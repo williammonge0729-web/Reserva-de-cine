@@ -16,6 +16,81 @@ public class Reserva_Cine {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	        
+	        Scanner sc = new Scanner(System.in);
+	        
+	        
+	        boolean loginExitoso = Menus.iniciarSesion();
+	        
+	        if (loginExitoso) {
+	            String peliculaSeleccionada = "";
+	            boolean confirmado = false;
+	            
+	            // Este bucle se repetirá mientras 'confirmado' sea false
+	            while (!confirmado) {
+	                peliculaSeleccionada = Menus.menuPeli();
+	                
+	                if (peliculaSeleccionada.equals("Salir") || peliculaSeleccionada.equals("Opción inválida")) {
+	                    System.out.println("\nReserva Cancelada o inválida.");
+	                    return; // Finaliza el programa
+	                }
+	                
+	                // Preguntamos si está seguro
+	                System.out.println("\n🎬 Ha seleccionado: " + peliculaSeleccionada);
+	                System.out.print("¿Está seguro de la película seleccionada? (si/no): ");
+	                String respuesta = sc.nextLine().trim().toLowerCase();
+	                
+	                if (respuesta.equals("si") || respuesta.equals("sí")) {
+	                    confirmado = true; // Rompe el bucle y continúa el código
+	                    System.out.println("\nPelícula confirmada con éxito.");
+	                } else {
+	                    System.out.println("\n🔄 Volviendo al menú de selección...");
+	                }
+
+	              String horarioFinal = Menus.mostrarHorarios(peliculaSeleccionada);
+	            
+	                reserva.gestionarReserva(peliculaSeleccionada, horarioFinal);
+	         
+
+	            } else {
+	                System.out.println("\nReserva Cancelada.");
+	            // Si el usuario confirmó la película, el programa continúa con los horarios y asientos
+	            String horarioFinal = Menus.mostrarHorarios(peliculaSeleccionada);
+	            reserva.gestionarReserva(peliculaSeleccionada, horarioFinal);
+	            
+	        } else {
+	            System.out.println("No puedes ver el menú sin iniciar sesión.");
+	        
+	    }
+	}
+
+=======
+MusicaFondo.encenderMusica(); 
+        
+        boolean loginExitoso = Menus.iniciarSesion();
+        
+        if (loginExitoso) {
+            boolean continuarPrograma = true;
+            
+            do {
+              
+                System.out.println(CYAN + "\n┌─────────────────────────────────────────────────────────┐" + RESET);
+                
+                System.out.println(CYAN + "│" + CYAN + "             SISTEMA CENTRAL DE CINE                     " + CYAN + "│" + RESET);
+                System.out.println(CYAN + "├─────────────────────────────────────────────────────────┤" + RESET);
+                System.out.println(CYAN + "│" + VERDE + "  1. Acceder como Cliente (Comprar Boletos)              " + CYAN + "│" + RESET);
+                System.out.println(CYAN + "│" + VERDE + "  2. Acceder como Empleado (Panel de Gestión)            " + CYAN + "│" + RESET);
+                
+                System.out.println(CYAN + "│" + ROJO + "  3. Apagar el Sistema                                   " + CYAN + "│" + RESET);
+                
+                System.out.println(CYAN + "└─────────────────────────────────────────────────────────┘" + RESET);
+                
+                System.out.print(" Seleccione su modo de acceso: ");
+                String rol = sc.nextLine().trim();
+>>>>>>> 953c5ecada43c1ad0d6dbe24165bac37b5d58fc4
 
         
         MusicaFondo.encenderMusica(); 
@@ -84,4 +159,5 @@ public class Reserva_Cine {
         
         sc.close();
     }
+>>>>>>> 30663dd2fb3977d676e5cc1926ed2f992af50169
 }
