@@ -14,13 +14,9 @@ public class Reserva_Cine {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
 		
-
-Scanner sc = new Scanner(System.in);
-        
-        
-        MusicaFondo.encenderMusica(); 
-        
+MusicaFondo.encenderMusica(); 
         
         boolean loginExitoso = Menus.iniciarSesion();
         
@@ -31,16 +27,13 @@ Scanner sc = new Scanner(System.in);
               
                 System.out.println(CYAN + "\n┌─────────────────────────────────────────────────────────┐" + RESET);
                 
-
                 System.out.println(CYAN + "│" + CYAN + "             SISTEMA CENTRAL DE CINE                     " + CYAN + "│" + RESET);
                 System.out.println(CYAN + "├─────────────────────────────────────────────────────────┤" + RESET);
                 System.out.println(CYAN + "│" + VERDE + "  1. Acceder como Cliente (Comprar Boletos)              " + CYAN + "│" + RESET);
                 System.out.println(CYAN + "│" + VERDE + "  2. Acceder como Empleado (Panel de Gestión)            " + CYAN + "│" + RESET);
                 
-              
                 System.out.println(CYAN + "│" + ROJO + "  3. Apagar el Sistema                                   " + CYAN + "│" + RESET);
                 
-           
                 System.out.println(CYAN + "└─────────────────────────────────────────────────────────┘" + RESET);
                 
                 System.out.print(" Seleccione su modo de acceso: ");
@@ -59,7 +52,7 @@ Scanner sc = new Scanner(System.in);
                             break; 
                         }
                         
-                        System.out.println("\n🎬 Ha seleccionado: " + PURPURA + peliculaSeleccionada + RESET);
+                        System.out.println("\n Ha seleccionado: " + PURPURA + peliculaSeleccionada + RESET);
                         System.out.print("¿Está seguro de la película seleccionada? (si/no): ");
                         String respuesta = sc.nextLine().trim().toLowerCase();
                         
@@ -77,7 +70,12 @@ Scanner sc = new Scanner(System.in);
                     }
 
                 } else if (rol.equals("2")) {
-                    Empleado.menuPanelEmpleado();
+                    // 🔒 FILTRO DE SEGURIDAD ANTES DE ENTRAR
+                    boolean esEmpleadoValido = Empleado.verificarContraseniaEmpleado();
+                    
+                    if (esEmpleadoValido) {
+                        Empleado.menuPanelEmpleado();
+                    }
 
                 } else if (rol.equals("3")) {
                     System.out.println(ROJO + "\n Apagando servidores... Muchas gracias por usar el sistema." + RESET);

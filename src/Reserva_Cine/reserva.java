@@ -60,7 +60,7 @@ public class reserva {
                     precio = 7;
                     break;
                 } else {
-                    System.out.println("❌ Error: Debe realizar la selección usando números (1, 2 o 3).");
+                    System.out.println(" Error: Debe realizar la selección usando números (1, 2 o 3).");
                 }
             }
 
@@ -77,7 +77,7 @@ public class reserva {
                     fila = Integer.parseInt(inputFila) - 1;
                     break;
                 } else {
-                    System.out.println("❌ Error: Debe ingresar el número de la fila correcto (1 al 4).");
+                    System.out.println(" Error: Debe ingresar el número de la fila correcto (1 al 4).");
                 }
             }
 
@@ -91,7 +91,7 @@ public class reserva {
                     columna = Integer.parseInt(inputColumna) - 1;
                     break;
                 } else {
-                    System.out.println("❌ Error: Debe ingresar el número de la columna correcto (1 al 5).");
+                    System.out.println(" Error: Debe ingresar el número de la columna correcto (1 al 5).");
                 }
             }
 
@@ -101,7 +101,7 @@ public class reserva {
                 reservados.add("Fila " + (fila + 1) + " Asiento " + (columna + 1));
                 System.out.println("✅ Asiento reservado con éxito.");
             } else {
-                System.out.println("❌ Asiento ya ocupado. Intente con otro.");
+                System.out.println(" Asiento ya ocupado. Intente con otro.");
                 i--; // Resta el intento para repetir este boleto
             }
         }
@@ -120,10 +120,10 @@ public class reserva {
                 if (pago >= 0) {
                     break;
                 } else {
-                    System.out.println("❌ El dinero no puede ser un valor negativo.");
+                    System.out.println(" El dinero no puede ser un valor negativo.");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("❌ Error: Debe ingresar el monto en números (Ej: 10 o 15.50).");
+                System.out.println(" Error: Debe ingresar el monto en números (Ej: 10 o 15.50).");
             }
         }
 
@@ -144,7 +144,7 @@ public class reserva {
             System.out.println("\nCambio a devolver: $" + cambio);
             System.out.println("=========================================");
         } else {
-            System.out.println("❌ Dinero insuficiente. Proceso de reserva cancelado.");
+            System.out.println(" Dinero insuficiente. Proceso de reserva cancelado.");
         }
     }
 

@@ -36,7 +36,7 @@ public class Menus {
         return loginExitoso; 
     }
 
-    // 🎬 2. CARTELERA DISPONIBLE (Tus películas con bordes CYAN y letras AZUL)
+    
     public static String menuPeli() { 
         Scanner sc = new Scanner(System.in);
         
@@ -51,7 +51,7 @@ public class Menus {
         System.out.println(Reserva_Cine.CYAN + "│" + Reserva_Cine.CYAN + "  6. Mortal Kombat 2                                     " + Reserva_Cine.CYAN + "│" + Reserva_Cine.RESET);
         System.out.println(Reserva_Cine.CYAN + "│" + Reserva_Cine.ROJO + "  7. Salir                                               " + Reserva_Cine.CYAN + "│" + Reserva_Cine.RESET);
         System.out.println(Reserva_Cine.CYAN + "└─────────────────────────────────────────────────────────┘" + Reserva_Cine.RESET);
-        System.out.print("👉 Elige una opción: ");
+        System.out.print("Elige una opción: ");
         
         String entrada = sc.nextLine().trim(); 
         String pelicula = ""; 
@@ -75,7 +75,7 @@ public class Menus {
         Scanner sc = new Scanner(System.in);
         
         System.out.println(Reserva_Cine.CYAN + "\n┌─────────────────────────────────────────────────────────┐" + Reserva_Cine.RESET);
-        System.out.println(Reserva_Cine.CYAN + "│" + Reserva_Cine.CYAN + "               ⏰ HORARIOS DISPONIBLES                   " + Reserva_Cine.CYAN + "│" + Reserva_Cine.RESET);
+        System.out.println(Reserva_Cine.CYAN + "│" + Reserva_Cine.CYAN + "                HORARIOS DISPONIBLES                   " + Reserva_Cine.CYAN + "│" + Reserva_Cine.RESET);
         System.out.println(Reserva_Cine.CYAN + "├─────────────────────────────────────────────────────────┤" + Reserva_Cine.RESET);
         
         String h1 = "";
@@ -132,7 +132,7 @@ public class Menus {
         
         System.out.println(Reserva_Cine.CYAN + "├─────────────────────────────────────────────────────────┤" + Reserva_Cine.RESET);
         
-        // Imprimimos tus variables formateadas dentro del marco en color AZUL
+        // 
         System.out.printf(Reserva_Cine.CYAN + "│" + Reserva_Cine.AZUL + "  1. %-52s" + Reserva_Cine.CYAN + "│\n" + RESET, h1);
         System.out.printf(Reserva_Cine.CYAN + "│" + Reserva_Cine.AZUL + "  2. %-52s" + Reserva_Cine.CYAN + "│\n" + RESET, h2);
         if (totalHorarios == 3) {
