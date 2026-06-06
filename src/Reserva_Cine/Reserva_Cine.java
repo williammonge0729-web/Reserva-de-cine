@@ -22,8 +22,6 @@ public class Reserva_Cine {
 	            while (!confirmado) {
 	                peliculaSeleccionada = Menus.menuPeli();
 	                
-<<<<<<< HEAD
-	                // Si elige salir o la opción es inválida, rompemos el flujo normal
 	                if (peliculaSeleccionada.equals("Salir") || peliculaSeleccionada.equals("Opción inválida")) {
 	                    System.out.println("\nReserva Cancelada o inválida.");
 	                    return; // Finaliza el programa
@@ -40,24 +38,22 @@ public class Reserva_Cine {
 	                } else {
 	                    System.out.println("\n🔄 Volviendo al menú de selección...");
 	                }
-=======
-	                String horarioFinal = Menus.mostrarHorarios(peliculaSeleccionada);
+
+	              String horarioFinal = Menus.mostrarHorarios(peliculaSeleccionada);
 	            
 	                reserva.gestionarReserva(peliculaSeleccionada, horarioFinal);
 	         
 
 	            } else {
 	                System.out.println("\nReserva Cancelada.");
->>>>>>> 424c699dc09435cc484f3756bff9a3a8cbebf3e8
-	            }
-	            
 	            // Si el usuario confirmó la película, el programa continúa con los horarios y asientos
 	            String horarioFinal = Menus.mostrarHorarios(peliculaSeleccionada);
 	            reserva.gestionarReserva(peliculaSeleccionada, horarioFinal);
 	            
 	        } else {
 	            System.out.println("No puedes ver el menú sin iniciar sesión.");
-	        }
+	        
 	    }
 	}
 
+}
